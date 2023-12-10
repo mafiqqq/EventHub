@@ -10,4 +10,5 @@ public class DataContext : DbContext
     }
 
      public DbSet<AppEvent> Events { get; set; }
+     public DbSet<AppUser> Users { get; set; }
 }

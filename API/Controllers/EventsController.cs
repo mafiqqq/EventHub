@@ -5,9 +5,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace API.Controllers;
 
-[ApiController]
-[Route("api/[controller]")]
-public class EventsController : ControllerBase
+public class EventsController : BaseApiController
 {
   private readonly DataContext _context;
   public EventsController(DataContext context)
@@ -24,6 +22,7 @@ public class EventsController : ControllerBase
   // }
   public async Task<ActionResult<IEnumerable<AppEvent>>> GetEvents()
   {
+        var abc = 1;
         var events = await _context.Events.ToListAsync();
 
         return events;
